@@ -41,15 +41,15 @@ public class ZebraAFontElement extends ZebraElement<ZebraAFontElement> {
 	 * 
 	 * @param zebraFont
 	 *            font zebra
-	 * @param dotHeigth
+	 * @param dotHeight
 	 *            height explain in dots
 	 * @param dotsWidth
 	 *            height explain in dots
 	 */
-	public ZebraAFontElement(ZebraFont zebraFont, int dotHeigth, int dotsWidth) {
+	public ZebraAFontElement(ZebraFont zebraFont, int dotHeight, int dotsWidth) {
 		super();
 		this.zebraFont = zebraFont;
-		this.dotHeigth = dotHeigth;
+		this.dotHeigth = dotHeight;
 		this.dotsWidth = dotsWidth;
 	}
 
@@ -60,16 +60,16 @@ public class ZebraAFontElement extends ZebraElement<ZebraAFontElement> {
 	 *            font zebra
 	 * @param zebraRotation
 	 *            text rotation
-	 * @param dotHeigth
+	 * @param dotHeight
 	 *            height explain in dots
 	 * @param dotsWidth
 	 *            height explain in dots
 	 */
-	public ZebraAFontElement(ZebraFont zebraFont, ZebraRotation zebraRotation, int dotHeigth, int dotsWidth) {
+	public ZebraAFontElement(ZebraFont zebraFont, ZebraRotation zebraRotation, int dotHeight, int dotsWidth) {
 		super();
 		this.zebraFont = zebraFont;
 		this.zebraRotation = zebraRotation;
-		this.dotHeigth = dotHeigth;
+		this.dotHeigth = dotHeight;
 		this.dotsWidth = dotsWidth;
 	}
 

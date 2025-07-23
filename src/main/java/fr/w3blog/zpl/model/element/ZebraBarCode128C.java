@@ -20,25 +20,25 @@ public class ZebraBarCode128C extends ZebraBarCode<ZebraBarCode128C> {
         super(positionX, positionY, text);
     }
 
-    public ZebraBarCode128C(int positionX, int positionY, String text, int barCodeHeigth) {
-        super(positionX, positionY, text, barCodeHeigth);
+    public ZebraBarCode128C(int positionX, int positionY, String text, int barCodeHeight) {
+        super(positionX, positionY, text, barCodeHeight);
     }
 
-    public ZebraBarCode128C(int positionX, int positionY, String text, int barCodeHeigth, int moduleWidth, int wideBarRatio) {
-        super(positionX, positionY, text, barCodeHeigth, moduleWidth, wideBarRatio);
+    public ZebraBarCode128C(int positionX, int positionY, String text, int barCodeHeight, int moduleWidth, int wideBarRatio) {
+        super(positionX, positionY, text, barCodeHeight, moduleWidth, wideBarRatio);
     }
 
-    public ZebraBarCode128C(int positionX, int positionY, String text, int barCodeHeigth, boolean showTextInterpretation, int moduleWidth, int wideBarRatio) {
-        super(positionX, positionY, text, barCodeHeigth, showTextInterpretation, moduleWidth, wideBarRatio);
+    public ZebraBarCode128C(int positionX, int positionY, String text, int barCodeHeight, boolean showTextInterpretation, int moduleWidth, int wideBarRatio) {
+        super(positionX, positionY, text, barCodeHeight, showTextInterpretation, moduleWidth, wideBarRatio);
     }
 
-    public ZebraBarCode128C(int positionX, int positionY, String text, int barCodeHeigth, boolean showTextInterpretation, int moduleWidth, int wideBarRatio, boolean checkDigit43) {
-        super(positionX, positionY, text, barCodeHeigth, showTextInterpretation, moduleWidth, wideBarRatio);
+    public ZebraBarCode128C(int positionX, int positionY, String text, int barCodeHeight, boolean showTextInterpretation, int moduleWidth, int wideBarRatio, boolean checkDigit43) {
+        super(positionX, positionY, text, barCodeHeight, showTextInterpretation, moduleWidth, wideBarRatio);
         this.checkDigit43 = checkDigit43;
     }
 
-    public ZebraBarCode128C(int positionX, int positionY, String text, int barCodeHeigth, boolean showTextInterpretation, boolean showTextInterpretationAbove) {
-        super(positionX, positionY, text, barCodeHeigth, showTextInterpretation, showTextInterpretationAbove);
+    public ZebraBarCode128C(int positionX, int positionY, String text, int barCodeHeight, boolean showTextInterpretation, boolean showTextInterpretationAbove) {
+        super(positionX, positionY, text, barCodeHeight, showTextInterpretation, showTextInterpretationAbove);
     }
 
 

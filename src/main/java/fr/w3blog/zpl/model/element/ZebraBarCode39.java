@@ -15,21 +15,21 @@ public class ZebraBarCode39 extends ZebraBarCode<ZebraBarCode39> {
 
 	private boolean checkDigit43 = false;
 
-	public ZebraBarCode39(int positionX, int positionY, String text, int barCodeHeigth) {
-		super(positionX, positionY, text, barCodeHeigth);
+	public ZebraBarCode39(int positionX, int positionY, String text, int barCodeHeight) {
+		super(positionX, positionY, text, barCodeHeight);
 	}
 
-	public ZebraBarCode39(int positionX, int positionY, String text, int barCodeHeigth, int barCodeWidth, int wideBarRatio) {
-		super(positionX, positionY, text, barCodeHeigth, barCodeWidth, wideBarRatio);
+	public ZebraBarCode39(int positionX, int positionY, String text, int barCodeHeight, int barCodeWidth, int wideBarRatio) {
+		super(positionX, positionY, text, barCodeHeight, barCodeWidth, wideBarRatio);
 	}
 
-	public ZebraBarCode39(int positionX, int positionY, String text, int barCodeHeigth, int barCodeWidth, int wideBarRatio, boolean checkDigit43) {
-		super(positionX, positionY, text, barCodeHeigth, barCodeWidth, wideBarRatio);
+	public ZebraBarCode39(int positionX, int positionY, String text, int barCodeHeight, int barCodeWidth, int wideBarRatio, boolean checkDigit43) {
+		super(positionX, positionY, text, barCodeHeight, barCodeWidth, wideBarRatio);
 		this.setCheckDigit43(checkDigit43);
 	}
 
-	public ZebraBarCode39(int positionX, int positionY, String text, int barCodeHeigth, boolean showTextInterpretation, boolean showTextInterpretationAbove) {
-		super(positionX, positionY, text, barCodeHeigth, showTextInterpretation, showTextInterpretationAbove);
+	public ZebraBarCode39(int positionX, int positionY, String text, int barCodeHeight, boolean showTextInterpretation, boolean showTextInterpretationAbove) {
+		super(positionX, positionY, text, barCodeHeight, showTextInterpretation, showTextInterpretationAbove);
 	}
 
 	@Override

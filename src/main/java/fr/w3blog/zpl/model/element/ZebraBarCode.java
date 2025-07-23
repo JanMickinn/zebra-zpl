@@ -70,17 +70,17 @@ public abstract class ZebraBarCode<T extends ZebraBarCode<T>> extends ZebraEleme
 	 *            top margin (explain in dots)
 	 * @param text
 	 *            code to write
-	 * @param barCodeHeigth
+	 * @param barCodeHeight
 	 *            height of code bar
-	 * @param barCodeWidth
+	 * @param moduleWidth
 	 *            width(optionnal) of code bar
 	 * @param wideBarRatio
 	 *            wide bar to narrow bar width ratio
 	 */
-	public ZebraBarCode(int positionX, int positionY, String text, int barCodeHeigth, int moduleWidth, int wideBarRatio) {
+	public ZebraBarCode(int positionX, int positionY, String text, int barCodeHeight, int moduleWidth, int wideBarRatio) {
 		this.positionX = positionX;
 		this.positionY = positionY;
-		this.barCodeHeigth = barCodeHeigth;
+		this.barCodeHeigth = barCodeHeight;
 		this.text = text;
 		this.moduleWidth = moduleWidth;
 		this.wideBarRatio = wideBarRatio;
@@ -95,7 +95,7 @@ public abstract class ZebraBarCode<T extends ZebraBarCode<T>> extends ZebraEleme
 	 *            top margin (explain in dots)
 	 * @param text
 	 *            code to write
-	 * @param barCodeHeigth
+	 * @param barCodeHeight
 	 *            height of code bar
 	 * @param showTextInterpretation
 	 *            true to print interpretation line
@@ -104,10 +104,10 @@ public abstract class ZebraBarCode<T extends ZebraBarCode<T>> extends ZebraEleme
 	 * @param wideBarRatio
 	 *            wide bar to narrow bar width ratio
 	 */
-	public ZebraBarCode(int positionX, int positionY, String text, int barCodeHeigth, boolean showTextInterpretation, int moduleWidth, int wideBarRatio) {
+	public ZebraBarCode(int positionX, int positionY, String text, int barCodeHeight, boolean showTextInterpretation, int moduleWidth, int wideBarRatio) {
 		this.positionX = positionX;
 		this.positionY = positionY;
-		this.barCodeHeigth = barCodeHeigth;
+		this.barCodeHeigth = barCodeHeight;
 		this.showTextInterpretation = showTextInterpretation;
 		this.text = text;
 		this.moduleWidth = moduleWidth;
@@ -123,17 +123,17 @@ public abstract class ZebraBarCode<T extends ZebraBarCode<T>> extends ZebraEleme
 	 *            top margin (explain in dots)
 	 * @param text
 	 *            code to write
-	 * @param barCodeHeigth
+	 * @param barCodeHeight
 	 *            height of code bar
 	 * @param showTextInterpretation
 	 *            true to print interpretation line
 	 * @param showTextInterpretationAbove
 	 *            true to add above, false to add below
 	 */
-	public ZebraBarCode(int positionX, int positionY, String text, int barCodeHeigth, boolean showTextInterpretation, boolean showTextInterpretationAbove) {
+	public ZebraBarCode(int positionX, int positionY, String text, int barCodeHeight, boolean showTextInterpretation, boolean showTextInterpretationAbove) {
 		this.positionX = positionX;
 		this.positionY = positionY;
-		this.barCodeHeigth = barCodeHeigth;
+		this.barCodeHeigth = barCodeHeight;
 		this.text = text;
 		this.showTextInterpretation = showTextInterpretation;
 		this.showTextInterpretationAbove = showTextInterpretationAbove;
