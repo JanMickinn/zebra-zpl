@@ -39,8 +39,6 @@ public class ZplUtils {
 	 * 
 	 * @param command
 	 *            Command (without ^)
-	 * @param variables
-	 *            list variable
 	 * @return
 	 */
 	public static StringBuilder zplCommand(String command) {
@@ -55,8 +53,6 @@ public class ZplUtils {
 	 * 
 	 * @param command
 	 *            Command (without ^)
-	 * @param variables
-	 *            list variable
 	 * @return
 	 */
 	public static StringBuilder zplCommandSautLigne(String command) {
