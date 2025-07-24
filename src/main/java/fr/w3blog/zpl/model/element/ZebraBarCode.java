@@ -18,7 +18,7 @@ import fr.w3blog.zpl.utils.ZplUtils;
  */
 public abstract class ZebraBarCode<T extends ZebraBarCode<T>> extends ZebraElement<T> {
 
-	Integer barCodeHeigth;
+	Integer barCodeHeight;
 
 	Integer moduleWidth;
 	Integer wideBarRatio;
@@ -51,13 +51,13 @@ public abstract class ZebraBarCode<T extends ZebraBarCode<T>> extends ZebraEleme
 	 *            top margin (explain in dots)
 	 * @param text
 	 *            code to write
-	 * @param barCodeHeigth
+	 * @param barCodeHeight
 	 *            height of code bar
 	 */
-	public ZebraBarCode(int positionX, int positionY, String text, int barCodeHeigth) {
+	public ZebraBarCode(int positionX, int positionY, String text, int barCodeHeight) {
 		this.positionX = positionX;
 		this.positionY = positionY;
-		this.barCodeHeigth = barCodeHeigth;
+		this.barCodeHeight = barCodeHeight;
 		this.text = text;
 	}
 
@@ -80,7 +80,7 @@ public abstract class ZebraBarCode<T extends ZebraBarCode<T>> extends ZebraEleme
 	public ZebraBarCode(int positionX, int positionY, String text, int barCodeHeight, int moduleWidth, int wideBarRatio) {
 		this.positionX = positionX;
 		this.positionY = positionY;
-		this.barCodeHeigth = barCodeHeight;
+		this.barCodeHeight = barCodeHeight;
 		this.text = text;
 		this.moduleWidth = moduleWidth;
 		this.wideBarRatio = wideBarRatio;
@@ -107,7 +107,7 @@ public abstract class ZebraBarCode<T extends ZebraBarCode<T>> extends ZebraEleme
 	public ZebraBarCode(int positionX, int positionY, String text, int barCodeHeight, boolean showTextInterpretation, int moduleWidth, int wideBarRatio) {
 		this.positionX = positionX;
 		this.positionY = positionY;
-		this.barCodeHeigth = barCodeHeight;
+		this.barCodeHeight = barCodeHeight;
 		this.showTextInterpretation = showTextInterpretation;
 		this.text = text;
 		this.moduleWidth = moduleWidth;
@@ -133,7 +133,7 @@ public abstract class ZebraBarCode<T extends ZebraBarCode<T>> extends ZebraEleme
 	public ZebraBarCode(int positionX, int positionY, String text, int barCodeHeight, boolean showTextInterpretation, boolean showTextInterpretationAbove) {
 		this.positionX = positionX;
 		this.positionY = positionY;
-		this.barCodeHeigth = barCodeHeight;
+		this.barCodeHeight = barCodeHeight;
 		this.text = text;
 		this.showTextInterpretation = showTextInterpretation;
 		this.showTextInterpretationAbove = showTextInterpretationAbove;
@@ -147,7 +147,7 @@ public abstract class ZebraBarCode<T extends ZebraBarCode<T>> extends ZebraEleme
 		zpl.append(getZplCodePosition());
 		zpl.append("\n");
 		if (moduleWidth != null) {
-			zpl.append(ZplUtils.zplCommandSautLigne("BY", moduleWidth, wideBarRatio, barCodeHeigth));
+			zpl.append(ZplUtils.zplCommandSautLigne("BY", moduleWidth, wideBarRatio, barCodeHeight));
 		}
 		return zpl;
 	}
@@ -171,9 +171,9 @@ public abstract class ZebraBarCode<T extends ZebraBarCode<T>> extends ZebraEleme
 		}
 		graphic.setColor(Color.BLACK);
 
-		Font font = new Font("Arial", Font.BOLD, barCodeHeigth / 2);
+		Font font = new Font("Arial", Font.BOLD, barCodeHeight / 2);
 
-		graphic.drawRect(left, top, ZplUtils.convertPointInPixel(Math.round(moduleWidth * wideBarRatio * 9 * text.length())), ZplUtils.convertPointInPixel(barCodeHeigth));
+		graphic.drawRect(left, top, ZplUtils.convertPointInPixel(Math.round(moduleWidth * wideBarRatio * 9 * text.length())), ZplUtils.convertPointInPixel(barCodeHeight));
 
 		drawTopString(graphic, font, text, left, top);
 	}
@@ -182,8 +182,8 @@ public abstract class ZebraBarCode<T extends ZebraBarCode<T>> extends ZebraEleme
 		return moduleWidth;
 	}
 
-	public Integer getBarCodeHeigth() {
-		return barCodeHeigth;
+	public Integer getBarCodeHeight() {
+		return barCodeHeight;
 	}
 
 	public Integer getWideBarRatio() {
@@ -208,7 +208,7 @@ public abstract class ZebraBarCode<T extends ZebraBarCode<T>> extends ZebraEleme
 	}
 
 	public T withBarCodeHeigth(Integer barCodeHeigth) {
-		this.barCodeHeigth = barCodeHeigth;
+		this.barCodeHeight = barCodeHeigth;
 		return getThis();
 	}
 
