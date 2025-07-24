@@ -24,6 +24,11 @@ public class ZebraQRCode extends Zebra2DCode<ZebraQRCode>
     */
    private static final int MASK = 7;
 
+   /**
+    * The level of error correction to apply. Valid values are H (highest reliability), Q (high reliability), M (medium reliability), and L (lower reliability). The default value is Q (high reliability).
+    */
+   private static final char ERROR_CORRECTION = 'Q';
+
    public ZebraQRCode(int positionX, int positionY, String text, int magnification)
    {
       super(positionX, positionY, text);
@@ -40,8 +45,8 @@ public class ZebraQRCode extends Zebra2DCode<ZebraQRCode>
    public String getZplCode(PrinterOptions printerOptions) {
       StringBuilder zpl = getStartZplCodeBuilder();
 
-      zpl.append(ZplUtils.zplCommandSautLigne("BQ", zebraRotation.getLetter(), MODEL, magnification, MASK));
-
+      zpl.append(ZplUtils.zplCommandSautLigne("BQ", zebraRotation.getLetter(), MODEL, magnification, ERROR_CORRECTION, MASK));
+      zpl.append(ZplUtils.zplCommandSautLigne("FDM0", text));
       zpl.append(ZplUtils.zplCommandSautLigne("FS"));
       return zpl.toString();
    }
