@@ -31,8 +31,7 @@ public class ZebraQRCode extends Zebra2DCode<ZebraQRCode>
 
    public ZebraQRCode(int positionX, int positionY, String text, int magnification)
    {
-      super(positionX, positionY, text);
-      this.magnification = magnification;
+      super(positionX, positionY, text, magnification);
    }
 
    @Override

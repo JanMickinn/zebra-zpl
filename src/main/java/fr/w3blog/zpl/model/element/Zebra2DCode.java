@@ -12,13 +12,9 @@ public abstract class Zebra2DCode<T extends Zebra2DCode<T>> extends ZebraBarCode
 
    protected int magnification;
 
-   public Zebra2DCode(int positionX, int positionY, String text, int barCodeHeight)
-   {
-      super(positionX, positionY, text, barCodeHeight);
-   }
-
-   public Zebra2DCode(int positionX, int positionY, String text)
+   public Zebra2DCode(int positionX, int positionY, String text, int magnification)
    {
       super(positionX, positionY, text);
+      this.magnification = magnification;
    }
 }
